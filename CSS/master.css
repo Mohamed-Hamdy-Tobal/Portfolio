@@ -524,9 +524,9 @@ textarea:focus  {
     padding-bottom: var(--padding-bottom);
 }
 .contact .contact-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-    grid-column-gap: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     grid-row-gap: 40px;
     text-align: center;
 }
@@ -535,7 +535,12 @@ textarea:focus  {
     position: relative;
     background: rgba(255, 255, 255, 0.15);
     transition: var(--main-trans);
-    position: relative;
+    flex-basis: 45%;
+}
+@media (max-width: 768px) {
+    .contact .contact-content .contact-box {
+        flex-basis: 100%;
+    }
 }
 .contact .contact-content .contact-box::before,
 .contact .contact-content .contact-box::after {
