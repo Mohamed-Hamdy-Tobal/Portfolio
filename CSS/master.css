@@ -73,6 +73,7 @@ textarea:focus  {
     text-transform: uppercase;
     color: var(--text-color);
     position: relative;
+    user-select: none;
 }
 .main-title::before {
     content: "";
